@@ -1,7 +1,7 @@
 # Fork from https://github.com/ThatRex/scripts.rexslab.com/blob/main/win.ps1
 
-Write-Host “Script Load Tool”
-Write-Host “Scripts by viarotel”
+Write-Host "Script Load Tool"
+Write-Host "Scripts by viarotel"
 
 param(
     [string]$script
