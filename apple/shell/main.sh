@@ -9,7 +9,7 @@ declare -A scripts=(
 )
 
 # 显示用户选择界面
-echo $'请选择要加载的远程脚本选项：\n'
+echo "请选择要加载的远程脚本选项："
 
 mapScripts=()
 index=1
@@ -19,10 +19,10 @@ for key in ${(k)scripts}; do
   ((index++))
 done
 
-echo $'\nq. 退出'
+echo "q. 退出"
 
 # 读取用户选择
-echo $'请输入选项： \n'
+echo "请输入选项："
 read -r -u 0 script_option
 
 # 检查退出选项

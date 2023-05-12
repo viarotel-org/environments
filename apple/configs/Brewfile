@@ -5,15 +5,15 @@ tap "homebrew/cask"
 tap "homebrew/services"
 
 # brews
-
+brew "mas"
 brew "git"
 brew "node@18", link: true
 
 # casks
 
+# cask "dingtalk"
 # cask "todesk"
 # cask "firefox"
-# cask "dingtalk"
 # cask "youdaonote"
 # cask "parallels"
 # cask "mos"
@@ -31,8 +31,15 @@ cask "tencent-lemon"
 cask "keka"
 cask "iina"
 cask "onedrive"
-cask "neteasemusic"
+cask "neteasemusic", args: { no_quarantine: true }
 cask "utools"
 cask "adrive"
 cask "bilibili"
 cask "microsoft-remote-desktop"
+
+# mas
+
+# mas "Tailscale", id: 1475387142
+mas "Qmenu", id: 1567442612
+mas "贝锐蒲公英", id: 1305707014
+mas "抖音", id: 1640407382

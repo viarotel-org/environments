@@ -11,7 +11,6 @@ function import_remote_script() {
   local temp_file=$(mktemp)
 
   echo "正在加载 $remote_script_url 脚本并执行"
-  echo $'\n'
 
   # 下载远程脚本到临时文件
   curl -fsSL "$remote_script_url" -o "$temp_file"

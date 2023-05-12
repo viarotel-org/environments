@@ -25,29 +25,29 @@ function import_remote_script() {
 
 # 设置终端主机名更
 function set_hostname() {
-  echo $'即将更新终端主机名, 是否继续?(y/n): \n'
+  echo "即将更新终端主机名, 是否继续?(y/n):"
   read -r -u 0 custom_hostname
   if [[ "$custom_hostname" == "y" || "$custom_hostname" == "Y" ]]; then
-    echo $'请输入终端主机名: \n'
+    echo "请输入终端主机名"
     read -r -u 0 custom_hostname_path
     sudo scutil --set HostName "$custom_hostname_path"
   else
-    echo $'已跳过终端主机名更新\n'
+    echo "已跳过终端主机名更新"
   fi
 }
 
 # 安装 Rosetta
 function install_rosetta() {
-  echo $'正在安装 Rosetta \n'
+  echo "正在安装 Rosetta"
   softwareupdate --install-rosetta
-  echo $'安装 Rosetta 成功 \n'
+  echo "安装 Rosetta 成功"
 }
 
 # 安装 xcode 命令行工具
 function install_xcode_select() {
-  echo $'正在安装 xcode 命令行工具 \n'
+  echo "正在安装 xcode 命令行工具"
   xcode-select --install
-  echo $'安装 xcode 命令行工具成功 \n'
+  echo "安装 xcode 命令行工具成功"
 }
 
 # 更新权限
