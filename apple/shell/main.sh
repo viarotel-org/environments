@@ -5,7 +5,7 @@ echo "Scripts by viarotel v0.0.1"
 
 # 定义脚本对象
 declare -A scripts=(
-  ["Init_MacOS"]="https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/init.sh|zsh"
+  ["Init_MacOS"]="https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/main.sh|zsh"
 )
 
 # 显示用户选择界面
@@ -22,8 +22,8 @@ done
 echo $'\nq. 退出'
 
 # 读取用户选择
-echo -n "请输入选项： "
-read script_option
+echo $'请输入选项： \n'
+read -r -u 0 script_option
 
 # 检查退出选项
 if [[ $script_option == "q" ]]; then

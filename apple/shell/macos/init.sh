@@ -3,7 +3,7 @@
 echo "Init MacOS"
 echo "Script by viarotel v0.0.1"
 
-set -e
+# set -e
 
 # 导入远程脚本
 function import_remote_script() {
@@ -26,10 +26,10 @@ function import_remote_script() {
 # 设置终端主机名更
 function set_hostname() {
   echo $'即将更新终端主机名, 是否继续?(y/n): \n'
-  read -r custom_hostname
+  read -r -u 0 custom_hostname
   if [[ "$custom_hostname" == "y" || "$custom_hostname" == "Y" ]]; then
     echo $'请输入终端主机名: \n'
-    read -r custom_hostname_path
+    read -r -u 0 custom_hostname_path
     sudo scutil --set HostName "$custom_hostname_path"
   else
     echo $'已跳过终端主机名更新\n'
