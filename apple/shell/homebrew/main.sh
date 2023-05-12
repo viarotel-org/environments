@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "Configuration Homebrew"
+echo "Init Homebrew"
 echo "Script by viarotel v0.0.1"
 
 set -e

@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+echo "Restore Brewfile"
+echo "Script by viarotel v0.0.1"
+
 set -e
 
 function restore_brewfile() {

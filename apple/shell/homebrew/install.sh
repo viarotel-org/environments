@@ -1,4 +1,6 @@
 #!/bin/zsh
+echo "Install Homebrew"
+echo "Script by viarotel v0.0.1"
 
 set -e
 
@@ -40,4 +42,8 @@ function install_homebrew() {
 
 install_homebrew
 
-exit 0
+echo "$0"
+
+# if [[ "$0" =~ "install" ]]; then
+#   exit 0
+# fi
