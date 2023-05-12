@@ -1,12 +1,17 @@
 #!/bin/zsh
 
-echo "Configuration Homebrew"
+echo "Init MacOS"
 echo "Script by viarotel v0.0.1"
+
+set -e
 
 # 导入远程脚本
 function import_remote_script() {
   local remote_script_url=$1
   local temp_file=$(mktemp)
+
+  echo "正在加载 $remote_script_url 脚本并执行"
+  echo $'\n'
 
   # 下载远程脚本到临时文件
   curl -fsSL "$remote_script_url" -o "$temp_file"
@@ -18,8 +23,6 @@ function import_remote_script() {
   rm "$temp_file"
 }
 
-# 安装 homebrew
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/scripts@main/shell/homebrew/install.sh'
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/environments@main/apple/shell/macos/init.sh'
 
-# 恢复 Brewfile 备份文件
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/scripts@main/shell/homebrew/restore.sh'
+exit 0

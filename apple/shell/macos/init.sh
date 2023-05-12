@@ -3,10 +3,15 @@
 echo "Init MacOS"
 echo "Script by viarotel v0.0.1"
 
+set -e
+
 # 导入远程脚本
 function import_remote_script() {
   local remote_script_url=$1
   local temp_file=$(mktemp)
+
+  echo "正在加载 $remote_script_url 脚本并执行"
+  echo $'\n'
 
   # 下载远程脚本到临时文件
   curl -fsSL "$remote_script_url" -o "$temp_file"
@@ -18,7 +23,44 @@ function import_remote_script() {
   rm "$temp_file"
 }
 
+# 设置终端主机名更
+function set_hostname() {
+  echo $'即将更新终端主机名, 是否继续?(y/n): \n'
+  read -r custom_hostname
+  if [[ "$custom_hostname" == "y" || "$custom_hostname" == "Y" ]]; then
+    echo $'请输入终端主机名: \n'
+    read -r custom_hostname_path
+    sudo scutil --set HostName "$custom_hostname_path"
+  else
+    echo $'已跳过终端主机名更新\n'
+  fi
+}
+
+# 安装 Rosetta
+function install_rosetta() {
+  echo $'正在安装 Rosetta \n'
+  softwareupdate --install-rosetta
+  echo $'安装 Rosetta 成功 \n'
+}
+
+# 安装 xcode 命令行工具
+function install_xcode_select() {
+  echo $'正在安装 xcode 命令行工具 \n'
+  xcode-select --install
+  echo $'安装 xcode 命令行工具成功 \n'
+}
+
+# 更新权限
+sudo -v
 # 允许所有应用来源
 sudo spctl --master-disable
+# 设置终端主机名
+set_hostname
+# Rosetta
+install_rosetta
+# 安装 xcode 命令行工具
+install_xcode_select
+# 安装配置 homebrew
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/environments@main/apple/shell/homebrew/main.sh'
 
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/scripts@main/shell/homebrew/main.sh'
+exit 0
