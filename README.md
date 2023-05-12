@@ -1,3 +1,3 @@
-# Scripts
+# Environments
 
-> viarotel's script collection
+> viarotel's Environments

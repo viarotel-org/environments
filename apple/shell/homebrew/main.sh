@@ -24,8 +24,8 @@ function import_remote_script() {
 }
 
 # 安装 homebrew
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/environments@main/apple/shell/homebrew/install.sh'
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/install.sh'
 # 恢复 Brewfile 备份文件
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/environments@main/apple/shell/homebrew/restore.sh'
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/restore.sh'
 
 exit 0

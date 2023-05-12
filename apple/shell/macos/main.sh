@@ -23,6 +23,6 @@ function import_remote_script() {
   rm "$temp_file"
 }
 
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel/environments@main/apple/shell/macos/init.sh'
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/init.sh'
 
 exit 0

@@ -12,9 +12,9 @@ if (!$script) { $script = $env:script }
 $name = "script.load.tool"
 $workDir = "$env:TEMP/$name"
 
-# 手动刷新 https://purge.jsdelivr.net/gh/viarotel/environments@main
+# 手动刷新 https://purge.jsdelivr.net/gh/viarotel-org/environments@main
 $scriptUrls = @{
-    "windows-virtual-monitor" = "https://cdn.jsdelivr.net/gh/viarotel/environments@main/microsoft/powershell/windows-virtual-monitor/main.ps1";
+    "windows-virtual-monitor" = "https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/microsoft/powershell/windows-virtual-monitor/main.ps1";
 }
 
 function DownloadAndExecuteScript([string]$url) {

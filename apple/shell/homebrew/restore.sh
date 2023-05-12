@@ -22,6 +22,6 @@ function restore_brewfile() {
   echo $'Brewfile 恢复成功\n'
 }
 
-restore_brewfile "https://cdn.jsdelivr.net/gh/viarotel/environments@main/shell/macos/configs/Brewfile"
+restore_brewfile "https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/shell/macos/configs/Brewfile"
 
 exit 0
