@@ -63,4 +63,7 @@ install_xcode_select
 # 安装配置 homebrew
 import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/main.sh'
 
-exit 0
+echo "$0"
+# if [[ "$0" =~ "install" ]]; then
+#   exit 0
+# fi

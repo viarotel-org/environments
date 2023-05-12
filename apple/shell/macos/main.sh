@@ -25,4 +25,7 @@ function import_remote_script() {
 
 import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/init.sh'
 
-exit 0
+echo "$0"
+# if [[ "$0" =~ "install" ]]; then
+#   exit 0
+# fi
