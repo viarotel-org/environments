@@ -27,7 +27,6 @@ import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main
 # 恢复 Brewfile 备份文件
 import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/restore.sh'
 
-echo "$0"
-# if [[ "$0" =~ "install" ]]; then
-#   exit 0
-# fi
+if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
+  exit 0
+fi

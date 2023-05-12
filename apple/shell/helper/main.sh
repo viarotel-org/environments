@@ -15,3 +15,7 @@ function import_remote_script() {
   # 删除临时文件
   rm "$temp_file"
 }
+
+if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
+  exit 0
+fi

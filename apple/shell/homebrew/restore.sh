@@ -3,7 +3,7 @@
 echo "Restore Brewfile"
 echo "Script by viarotel v0.0.1"
 
-set -e
+# set -e
 
 function restore_remote_brewfile() {
   local remote_script_url=$1
@@ -40,7 +40,6 @@ function restore_brewfile() {
 
 restore_brewfile "https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/configs/Brewfile"
 
-echo "$0"
-# if [[ "$0" =~ "install" ]]; then
-#   exit 0
-# fi
+if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
+  exit 0
+fi

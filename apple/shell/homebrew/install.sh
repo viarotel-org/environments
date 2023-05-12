@@ -2,7 +2,7 @@
 echo "Install Homebrew"
 echo "Script by viarotel v0.0.1"
 
-set -e
+# set -e
 
 function install_homebrew() {
   echo "正在设置 homebrew 国内源"
@@ -40,7 +40,6 @@ function install_homebrew() {
 
 install_homebrew
 
-echo "$0"
-# if [[ "$0" =~ "install" ]]; then
-#   exit 0
-# fi
+if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
+  exit 0
+fi
