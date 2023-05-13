@@ -5,7 +5,7 @@ echo "Scripts by viarotel v0.0.1"
 
 # 定义脚本对象
 declare -A scripts=(
-  ["Init_MacOS"]="https://gitee.com/viarotel/environments/raw/gitee/apple/shell/macos/main.sh|zsh"
+  ["Init_MacOS"]="https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/main.sh|zsh"
 )
 
 # 显示用户选择界面

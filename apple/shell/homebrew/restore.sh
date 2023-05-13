@@ -38,7 +38,7 @@ function restore_brewfile() {
   fi 
 }
 
-restore_brewfile "https://gitee.com/viarotel/environments/raw/gitee/apple/configs/Brewfile"
+restore_brewfile "https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/configs/Brewfile"
 
 if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
   exit 0

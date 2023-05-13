@@ -22,7 +22,7 @@ function import_remote_script() {
   rm "$temp_file"
 }
 
-import_remote_script 'https://gitee.com/viarotel/environments/raw/gitee/apple/shell/macos/init.sh'
+import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/macos/init.sh'
 
 if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
   exit 0
