@@ -23,7 +23,7 @@ echo "q. 退出"
 
 # 读取用户选择
 echo "请输入选项："
-read -r -u 0 script_option
+read -rk script_option
 
 # 检查退出选项
 if [[ $script_option == "q" ]]; then

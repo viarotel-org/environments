@@ -23,10 +23,10 @@ function restore_remote_brewfile() {
 function restore_brewfile() {
   local brewfile_path=$1
   echo "即将恢复 Brewfile 备份的包, 是否继续？(y/n):"
-  read -r -u 0 is_continue
+  read -rk is_continue
   if [[ "$is_continue" == "y" || "$is_continue" == "Y" ]]; then
     echo "请输入 Brewfile 的路径或 URL(为空时将采用默认路径):"
-    read -r -u 0 custom_brewfile_path
+    read -rk custom_brewfile_path
     if [[ -n "$custom_brewfile_path" ]]; then
       brew bundle --file="$custom_brewfile_path"
     else
