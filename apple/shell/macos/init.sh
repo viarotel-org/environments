@@ -61,7 +61,7 @@ install_rosetta
 # 安装 xcode 命令行工具
 install_xcode_select
 # 安装配置 homebrew
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/main.sh'
+import_remote_script 'https://gitee.com/viarotel/environments/raw/main/apple/shell/homebrew/main.sh'
 
 if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
   exit 0
