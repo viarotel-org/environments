@@ -17,7 +17,7 @@ function import_remote_script() {
   curl -fsSL "$remote_script_url" -o "$temp_file"
 
   # 导入脚本到当前环境
-  /bin/zsh -i "$temp_file"
+  source "$temp_file"
 
   # 删除临时文件
   rm "$temp_file"
@@ -26,10 +26,10 @@ function import_remote_script() {
 # 设置终端主机名更
 function set_hostname() {
   echo "即将更新终端主机名, 是否继续?(y/n):"
-  read -r -u 0 custom_hostname
+  read -rk custom_hostname
   if [[ "$custom_hostname" == "y" || "$custom_hostname" == "Y" ]]; then
     echo "请输入终端主机名"
-    read -r -u 0 custom_hostname_path
+    read -rk custom_hostname_path
     sudo scutil --set HostName "$custom_hostname_path"
   else
     echo "已跳过终端主机名更新"
@@ -39,7 +39,7 @@ function set_hostname() {
 # 安装 Rosetta
 function install_rosetta() {
   echo "正在安装 Rosetta"
-  softwareupdate --install-rosetta
+  softwareupdate --install-rosetta --agree-to-license
   echo "安装 Rosetta 成功"
 }
 
@@ -61,7 +61,7 @@ install_rosetta
 # 安装 xcode 命令行工具
 install_xcode_select
 # 安装配置 homebrew
-import_remote_script 'https://cdn.jsdelivr.net/gh/viarotel-org/environments@main/apple/shell/homebrew/main.sh'
+import_remote_script 'https://gitee.com/viarotel/environments/raw/gitee/apple/shell/homebrew/main.sh'
 
 if [[ "$ZSH_EVAL_CONTEXT" == "toplevel" ]]; then
   exit 0
