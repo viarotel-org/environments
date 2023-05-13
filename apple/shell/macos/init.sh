@@ -39,7 +39,7 @@ function set_hostname() {
 # 安装 Rosetta
 function install_rosetta() {
   echo "正在安装 Rosetta"
-  softwareupdate --install-rosetta
+  softwareupdate --install-rosetta --agree-to-license
   echo "安装 Rosetta 成功"
 }
 
