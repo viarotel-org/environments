@@ -47,9 +47,9 @@ else
   exit 0
 fi
 
-echo $script_name
-echo $remote_script
-echo $interpreter
+# echo $script_name
+# echo $remote_script
+# echo $interpreter
 
 # 下载并执行远程脚本
 echo "正在加载脚本中: $script_name"
