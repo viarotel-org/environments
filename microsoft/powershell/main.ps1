@@ -1,8 +1,5 @@
 # Fork from https://github.com/ThatRex/scripts.rexslab.com/blob/main/win.ps1
 
-Write-Host "Script Load Tool"
-Write-Host "Scripts by viarotel"
-
 param(
     [string]$script
 )
@@ -12,7 +9,6 @@ if (!$script) { $script = $env:script }
 $name = "script.load.tool"
 $workDir = "$env:TEMP/$name"
 
-# 手动刷新 https://purge.jsdelivr.net/gh/viarotel-org/environments@main
 $scriptUrls = @{
     "windows-virtual-monitor" = "https://gitee.com/viarotel/environments/raw/gitee/microsoft/powershell/windows-virtual-monitor/main.ps1";
 }
