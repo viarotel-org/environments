@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/services"
 
 # brews
+brew "mackup"
 brew "mas"
 brew "git"
 brew "node@18", link: true
@@ -18,7 +19,6 @@ brew "node@18", link: true
 # cask "parallels"
 # cask "mos"
 # cask "clashx"
-# cask "tailscale"
 cask "aldente"
 cask "betterdisplay"
 cask "google-chrome"
@@ -36,6 +36,7 @@ cask "utools"
 cask "adrive"
 cask "bilibili"
 cask "microsoft-remote-desktop"
+cask "tailscale"
 
 # mas
 
