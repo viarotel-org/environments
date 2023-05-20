@@ -5,10 +5,12 @@ tap "homebrew/cask"
 tap "homebrew/services"
 
 # brews
+
+# brew "node@18", link: true
 brew "mackup"
 brew "mas"
 brew "git"
-brew "node@18", link: true
+brew "nvm"
 
 # casks
 
